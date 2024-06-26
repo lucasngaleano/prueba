@@ -1,2 +1,2 @@
-# presupuestador
-presupuestador en JS
+# Cotizador
+cotizador hecho durante el curso de JavaScript principiante
