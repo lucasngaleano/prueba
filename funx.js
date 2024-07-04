@@ -31,4 +31,27 @@ function asignarValores (valorDeSel) {
         return fmvalor; 
 }
 
+function validar() {
+
+    let fieldTotalM2 = document.getElementById('metros2');
+
+    valorSelProp = selectProp.value;
+
+    fmPropiedad = asignarValores(valorSelProp);
+
+    valorSelUbi = selectUbi.value;
+    
+    fmUbicacion = asignarValores(valorSelUbi);
+
+    totalM2 = Number(fieldTotalM2.value);
+
+    if (fmPropiedad && fmUbicacion && (totalM2 > 0)) { //validacion de la solucion
+        let totalPoliza = fmPropiedad * fmUbicacion * totalM2 * costoBase;
+         let valpol = document.getElementById('valorPoliza')
+         valpol.textContent = `El monto de la poliza es de $${totalPoliza.toFixed(2)}`;
+    } else {
+        let valpol = document.getElementById('valorPoliza')
+         valpol.textContent = `los datos ingresados no son validos`;
+    }
+}
 
